@@ -13,3 +13,13 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+
+# Add a luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+
+# Add a luci-app-adguardhome
+git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/lean/luci-app-adguardhome
+
+# Add a SSR-PLUS
+echo "src-git helloworld https://github.com/fw876/helloworld" >> feeds.conf.default
+./scripts/feeds update -a && ./scripts/feeds install -a
