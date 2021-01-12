@@ -18,9 +18,9 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-  schedule:	
-    - cron: 10 16 */5 * *	
-  watch:	
+  schedule:
+    - cron: 10 16 */5 * *
+  watch:
     types: started
 
 env:
@@ -179,7 +179,7 @@ jobs:
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
-      uses: ActionsRML/delete-workflow-runs@main
+      uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 1
         keep_minimum_runs: 3
