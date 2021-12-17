@@ -22,5 +22,9 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lea
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/lean/luci-app-adguardhome
 
 # Add a SSR-PLUS
-echo "src-git helloworld https://github.com/fw876/helloworld" >> feeds.conf.default
+#echo "src-git helloworld https://github.com/fw876/helloworld" >> feeds.conf.default
+
+# Add a Passwall
+echo "src-git passwall src-git passwall https://github.com/xiaorouji/openwrt-passwall" >> feeds.conf.default
+
 ./scripts/feeds update -a && ./scripts/feeds install -a
