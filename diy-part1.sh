@@ -27,4 +27,4 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/lean
 # Add a Passwall
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall" >> feeds.conf.default
 
-./scripts/feeds update -a && ./scripts/feeds install -a
+./scripts/feeds update -a && ./scripts/feeds install -af
